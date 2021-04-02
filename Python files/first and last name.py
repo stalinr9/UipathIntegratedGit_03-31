@@ -1,0 +1,1 @@
+print("Enter at any time to quit.")

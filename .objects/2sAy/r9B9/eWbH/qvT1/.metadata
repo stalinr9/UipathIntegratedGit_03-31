@@ -1,0 +1,13 @@
+﻿{
+  "Id": "qvT11CncskGwpqbfe3Gkrw",
+  "Reference": "IByKh0jIeU-Urc1wWhnBTQ/qvT11CncskGwpqbfe3Gkrw",
+  "ParentRef": "IByKh0jIeU-Urc1wWhnBTQ/eWbHEPQv60OhS1XsvqR08g",
+  "Name": "Password Field",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2020-11-30T05:44:19.8968379Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-11-30T05:44:19.8968379Z"
+}

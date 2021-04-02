@@ -1,0 +1,705 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Dumm2" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="TextMessage" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>546.666666666667,1076.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Dumm2_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="74">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Abbyy.Core.FlexiCapture</x:String>
+      <x:String>UiPath.Abbyy.Core.FlexiCapture.Enums</x:String>
+      <x:String>UiPath.Abbyy.Core.FlexiCapture.ValidationStationAdapters</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Windows.Forms</x:String>
+      <x:String>UiPath.Persistence.Activities.Job</x:String>
+      <x:String>UiPath.Persistence.Activities</x:String>
+      <x:String>UiPath.Persistence.Orchestrator.Client.Models</x:String>
+      <x:String>UiPath.Persistence.Activities.Queue</x:String>
+      <x:String>UiPath.Persistence.Activities.Tasks</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="60">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.Abbyy.Activities</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Orchestrator.Client</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>UiPath.Abbyy.Core</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Dumm2" sap:VirtualizedContainerService.HintSize="426.666666666667,972" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new list(of string) from {&quot;Stalin&quot;,&quot;Ramadoss&quot;}]" Name="strList" />
+      <Variable x:TypeArguments="x:String" Name="str" />
+      <Variable x:TypeArguments="s:String[]" Name="strarray" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="vWord_ctr" />
+      <Variable x:TypeArguments="x:String" Name="vfinal" />
+      <Variable x:TypeArguments="x:String" Name="str_strArray" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ParallelForEach x:TypeArguments="x:Int32" DisplayName="Parallel For Each" sap:VirtualizedContainerService.HintSize="384.666666666667,212.666666666667" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_1" Values="[Enumerable.range(0,5)]">
+      <ActivityAction x:TypeArguments="x:Int32">
+        <ActivityAction.Argument>
+          <DelegateInArgument x:TypeArguments="x:Int32" Name="item" />
+        </ActivityAction.Argument>
+        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_13" Text="[item]" />
+      </ActivityAction>
+    </ParallelForEach>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="'Imports System.Text&#xA;Dim city As String = &quot;Bangalore&quot;&#xA;Dim state As String = &quot;Karnataka&quot;&#xA;Dim zip As String = &quot;560100&quot;&#xA;Dim queryAddress As New StringBuilder&#xA;queryAddress.Append(&quot;http://maps.google.com/maps?q=&quot;)&#xA;queryAddress.Append(street+&quot;,&quot;&amp;&quot;+&quot;)&#xA;queryAddress.Append(city+&quot;,&quot;&amp;&quot;+&quot;)&#xA;queryAddress.Append(state+&quot;,&quot;&amp;&quot;+&quot;)&#xA;process.start(queryAddress.ToString)" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="384.666666666667,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="street ">doddadhogur</InArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="384.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="476,144.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ApiKey="yrA9E/jArN7TvZsy3lt1bq8MTJutf7ba9ib9G97LNarn2bKH2MAF3p8P/fwBHsR294ujFZ70nIgojlwGn8H7fg==" DisplayName="CV Screen Scope 'chrome.exe'" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="CVScope_1" Server="https://cv.uipath.com" Version="V1">
+            <p:CVScope.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Request Enterprise Trial' (835,29,121,10)&quot;]" DesignTimeScaleFactor="1.5" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="8b618d4f6e3dc3eedbab600bccd9bc2e" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
+                    <p:CvClickWithDescriptor.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </p:CvClickWithDescriptor.CursorPosition>
+                    <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                      <uc:CvDescriptor InformativeScreenshot="8b618d4f6e3dc3eedbab600bccd9bc2e">
+                        <uc:CvDescriptor.Target>
+                          <uc:CvElementDescriptor DesignTimeArea="835, 29, 121, 10" ElementType="Text" Text="Request Enterprise Trial" />
+                        </uc:CvDescriptor.Target>
+                      </uc:CvDescriptor>
+                    </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                    <p:CvClickWithDescriptor.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="14d684e7-c15b-47b0-a8f8-d298ff369ec9">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </p:CvClickWithDescriptor.Target>
+                  </p:CvClickWithDescriptor>
+                </Sequence>
+              </ActivityAction>
+            </p:CVScope.Body>
+            <p:CVScope.DesignTimeCache>
+              <uc:CVCache InformativeScreenshot="f06ef46aa51248c93dfb0a93c5bd5acf" LogicalPosition="457, 196" OcrText="Licenses Cornrnunitv Plan&#xA;Subscription Expiry: Apr 27, 2022&#xA;Robots&#xA;A1 Robots Request Enterprise Trial&#xA;Studios Other Services&#xA;An A1 Robot is what you use to run your ML Skills or to run training&#xA;jobs to train or retrain your ML Skills. An A1 Robot can run 2 ML Ski[[s&#xA;at a time and can run 1 training job ata time.&#xA;Computer Vision&#xA;Throughput limit (megapixels/rnin)&#xA;API Key: yrA9E/jArN7Tvzsy31t1bq8MTJut...&#xA;Copy API key Generate new&#xA;Data Service Units (DSIJ)&#xA;Each Data Service unit grants you 1 GB of data storage, 5 GB of&#xA;attachment storage and 30,000 API GPUs&#xA;You can attach a GPU at any ML Skill. This may help the ML Skill&#xA;run much faster if the ML Skill has been optimized to run on&#xA;GPUs. GPUs can also be added to an A1 Robot to run a training&#xA;job.&#xA;Document Understanding&#xA;30 Documents limited to 2 pages and 4MB.&#xA;API Key: Not generated yet.&#xA;Copy API key Generate new" Position="457, 196" ScaleFactor="1.5" ScreenshotGuid="c5b77910-41eb-4fbc-adc3-ee2597e7e550" ServerVersion="1">
+                <uc:CVCache.CvUiElements>
+                  <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="8">
+                    <uc:CvElementInfo Category="Button" Region="822, 18, 146, 32" />
+                    <uc:CvElementInfo Category="Button" Region="76, 22, 113, 20" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="261, 76, 106, 34" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="255, 82, 122, 30" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="822, 18, 143, 28" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="77, 23, 112, 19" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="272, 60, 94, 65" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="260, 66, 110, 26" />
+                  </scg:List>
+                </uc:CVCache.CvUiElements>
+                <uc:CVCache.OcrTexts>
+                  <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="256">
+                    <uc:OcrTextInfo Region="19, 28, 53, 10" Text="Licenses" />
+                    <uc:OcrTextInfo Region="92, 30, 56, 8" Text="Cornrnunitv" />
+                    <uc:OcrTextInfo Region="153, 29, 19, 8" Text="Plan" />
+                    <uc:OcrTextInfo Region="18, 57, 60, 10" Text="Subscription" />
+                    <uc:OcrTextInfo Region="83, 58, 31, 10" Text="Expiry:" />
+                    <uc:OcrTextInfo Region="121, 58, 16, 10" Text="Apr" />
+                    <uc:OcrTextInfo Region="141, 58, 12, 8" Text="27," />
+                    <uc:OcrTextInfo Region="158, 58, 21, 7" Text="2022" />
+                    <uc:OcrTextInfo Region="61, 94, 34, 8" Text="Robots" />
+                    <uc:OcrTextInfo Region="18, 148, 12, 8" Text="A1" />
+                    <uc:OcrTextInfo Region="34, 148, 38, 9" Text="Robots" />
+                    <uc:OcrTextInfo Region="835, 29, 41, 10" Text="Request" />
+                    <uc:OcrTextInfo Region="880, 29, 52, 10" Text="Enterprise" />
+                    <uc:OcrTextInfo Region="934, 29, 22, 8" Text="Trial" />
+                    <uc:OcrTextInfo Region="179, 94, 36, 8" Text="Studios" />
+                    <uc:OcrTextInfo Region="281, 95, 28, 8" Text="Other" />
+                    <uc:OcrTextInfo Region="314, 95, 40, 8" Text="Services" />
+                    <uc:OcrTextInfo Region="18, 166, 12, 7" Text="An" />
+                    <uc:OcrTextInfo Region="34, 166, 9, 7" Text="A1" />
+                    <uc:OcrTextInfo Region="48, 166, 28, 8" Text="Robot" />
+                    <uc:OcrTextInfo Region="80, 166, 6, 8" Text="is" />
+                    <uc:OcrTextInfo Region="90, 166, 23, 8" Text="what" />
+                    <uc:OcrTextInfo Region="116, 168, 17, 8" Text="you" />
+                    <uc:OcrTextInfo Region="138, 168, 15, 6" Text="use" />
+                    <uc:OcrTextInfo Region="158, 167, 9, 6" Text="to" />
+                    <uc:OcrTextInfo Region="171, 168, 16, 6" Text="run" />
+                    <uc:OcrTextInfo Region="190, 168, 22, 8" Text="your" />
+                    <uc:OcrTextInfo Region="216, 166, 14, 7" Text="ML" />
+                    <uc:OcrTextInfo Region="234, 166, 23, 8" Text="Skills" />
+                    <uc:OcrTextInfo Region="261, 168, 10, 6" Text="or" />
+                    <uc:OcrTextInfo Region="274, 167, 9, 6" Text="to" />
+                    <uc:OcrTextInfo Region="288, 168, 16, 6" Text="run" />
+                    <uc:OcrTextInfo Region="308, 166, 36, 10" Text="training" />
+                    <uc:OcrTextInfo Region="17, 182, 20, 10" Text="jobs" />
+                    <uc:OcrTextInfo Region="41, 183, 9, 6" Text="to" />
+                    <uc:OcrTextInfo Region="54, 182, 21, 7" Text="train" />
+                    <uc:OcrTextInfo Region="80, 184, 9, 6" Text="or" />
+                    <uc:OcrTextInfo Region="94, 182, 31, 8" Text="retrain" />
+                    <uc:OcrTextInfo Region="129, 184, 22, 8" Text="your" />
+                    <uc:OcrTextInfo Region="155, 182, 13, 7" Text="ML" />
+                    <uc:OcrTextInfo Region="172, 182, 26, 8" Text="Skills." />
+                    <uc:OcrTextInfo Region="202, 182, 12, 7" Text="An" />
+                    <uc:OcrTextInfo Region="218, 182, 9, 7" Text="A1" />
+                    <uc:OcrTextInfo Region="232, 182, 28, 8" Text="Robot" />
+                    <uc:OcrTextInfo Region="264, 184, 16, 6" Text="can" />
+                    <uc:OcrTextInfo Region="284, 184, 16, 6" Text="run" />
+                    <uc:OcrTextInfo Region="304, 182, 4, 7" Text="2" />
+                    <uc:OcrTextInfo Region="313, 182, 13, 7" Text="ML" />
+                    <uc:OcrTextInfo Region="330, 182, 23, 8" Text="Ski[[s" />
+                    <uc:OcrTextInfo Region="18, 199, 8, 6" Text="at" />
+                    <uc:OcrTextInfo Region="30, 200, 4, 6" Text="a" />
+                    <uc:OcrTextInfo Region="39, 198, 21, 7" Text="time" />
+                    <uc:OcrTextInfo Region="64, 198, 17, 8" Text="and" />
+                    <uc:OcrTextInfo Region="86, 200, 16, 6" Text="can" />
+                    <uc:OcrTextInfo Region="106, 200, 15, 6" Text="run" />
+                    <uc:OcrTextInfo Region="126, 198, 2, 7" Text="1" />
+                    <uc:OcrTextInfo Region="134, 198, 37, 10" Text="training" />
+                    <uc:OcrTextInfo Region="175, 198, 15, 10" Text="job" />
+                    <uc:OcrTextInfo Region="194, 199, 16, 6" Text="ata" />
+                    <uc:OcrTextInfo Region="215, 198, 24, 7" Text="time." />
+                    <uc:OcrTextInfo Region="18, 250, 57, 11" Text="Computer" />
+                    <uc:OcrTextInfo Region="80, 250, 34, 8" Text="Vision" />
+                    <uc:OcrTextInfo Region="18, 267, 58, 10" Text="Throughput" />
+                    <uc:OcrTextInfo Region="80, 267, 20, 8" Text="limit" />
+                    <uc:OcrTextInfo Region="104, 267, 84, 10" Text="(megapixels/rnin)" />
+                    <uc:OcrTextInfo Region="18, 287, 16, 7" Text="API" />
+                    <uc:OcrTextInfo Region="38, 287, 20, 10" Text="Key:" />
+                    <uc:OcrTextInfo Region="66, 286, 163, 10" Text="yrA9E/jArN7Tvzsy31t1bq8MTJut..." />
+                    <uc:OcrTextInfo Region="18, 307, 23, 10" Text="Copy" />
+                    <uc:OcrTextInfo Region="45, 307, 16, 7" Text="API" />
+                    <uc:OcrTextInfo Region="65, 306, 15, 10" Text="key" />
+                    <uc:OcrTextInfo Region="94, 307, 44, 7" Text="Generate" />
+                    <uc:OcrTextInfo Region="142, 308, 18, 6" Text="new" />
+                    <uc:OcrTextInfo Region="19, 341, 25, 8" Text="Data" />
+                    <uc:OcrTextInfo Region="49, 341, 40, 8" Text="Service" />
+                    <uc:OcrTextInfo Region="94, 341, 29, 8" Text="Units" />
+                    <uc:OcrTextInfo Region="128, 341, 31, 10" Text="(DSIJ)" />
+                    <uc:OcrTextInfo Region="18, 358, 21, 8" Text="Each" />
+                    <uc:OcrTextInfo Region="44, 359, 21, 7" Text="Data" />
+                    <uc:OcrTextInfo Region="70, 359, 33, 7" Text="Service" />
+                    <uc:OcrTextInfo Region="108, 359, 19, 7" Text="unit" />
+                    <uc:OcrTextInfo Region="131, 360, 30, 9" Text="grants" />
+                    <uc:OcrTextInfo Region="165, 361, 17, 8" Text="you" />
+                    <uc:OcrTextInfo Region="187, 359, 2, 7" Text="1" />
+                    <uc:OcrTextInfo Region="196, 359, 12, 7" Text="GB" />
+                    <uc:OcrTextInfo Region="212, 358, 10, 8" Text="of" />
+                    <uc:OcrTextInfo Region="226, 358, 20, 8" Text="data" />
+                    <uc:OcrTextInfo Region="250, 360, 38, 9" Text="storage," />
+                    <uc:OcrTextInfo Region="294, 359, 4, 7" Text="5" />
+                    <uc:OcrTextInfo Region="302, 359, 12, 7" Text="GB" />
+                    <uc:OcrTextInfo Region="319, 358, 10, 8" Text="of" />
+                    <uc:OcrTextInfo Region="18, 374, 56, 8" Text="attachment" />
+                    <uc:OcrTextInfo Region="78, 376, 36, 9" Text="storage" />
+                    <uc:OcrTextInfo Region="118, 374, 17, 8" Text="and" />
+                    <uc:OcrTextInfo Region="140, 375, 31, 8" Text="30,000" />
+                    <uc:OcrTextInfo Region="175, 375, 15, 7" Text="API" />
+                    <uc:OcrTextInfo Region="516, 148, 29, 8" Text="GPUs" />
+                    <uc:OcrTextInfo Region="516, 166, 16, 7" Text="You" />
+                    <uc:OcrTextInfo Region="537, 168, 16, 6" Text="can" />
+                    <uc:OcrTextInfo Region="557, 166, 29, 8" Text="attach" />
+                    <uc:OcrTextInfo Region="590, 168, 4, 6" Text="a" />
+                    <uc:OcrTextInfo Region="600, 166, 20, 7" Text="GPU" />
+                    <uc:OcrTextInfo Region="624, 167, 8, 6" Text="at" />
+                    <uc:OcrTextInfo Region="636, 168, 16, 8" Text="any" />
+                    <uc:OcrTextInfo Region="657, 166, 14, 7" Text="ML" />
+                    <uc:OcrTextInfo Region="674, 166, 20, 8" Text="Skill." />
+                    <uc:OcrTextInfo Region="699, 166, 19, 8" Text="This" />
+                    <uc:OcrTextInfo Region="722, 168, 20, 8" Text="may" />
+                    <uc:OcrTextInfo Region="746, 166, 20, 10" Text="help" />
+                    <uc:OcrTextInfo Region="770, 166, 14, 8" Text="the" />
+                    <uc:OcrTextInfo Region="790, 166, 14, 7" Text="ML" />
+                    <uc:OcrTextInfo Region="807, 166, 18, 8" Text="Skill" />
+                    <uc:OcrTextInfo Region="516, 184, 15, 6" Text="run" />
+                    <uc:OcrTextInfo Region="536, 182, 26, 8" Text="much" />
+                    <uc:OcrTextInfo Region="566, 182, 28, 8" Text="faster" />
+                    <uc:OcrTextInfo Region="598, 182, 6, 8" Text="if" />
+                    <uc:OcrTextInfo Region="607, 182, 14, 8" Text="the" />
+                    <uc:OcrTextInfo Region="626, 182, 13, 7" Text="ML" />
+                    <uc:OcrTextInfo Region="644, 182, 18, 8" Text="Skill" />
+                    <uc:OcrTextInfo Region="666, 182, 16, 8" Text="has" />
+                    <uc:OcrTextInfo Region="686, 182, 23, 8" Text="been" />
+                    <uc:OcrTextInfo Region="714, 182, 47, 10" Text="optimized" />
+                    <uc:OcrTextInfo Region="765, 183, 9, 6" Text="to" />
+                    <uc:OcrTextInfo Region="778, 184, 16, 6" Text="run" />
+                    <uc:OcrTextInfo Region="798, 184, 11, 5" Text="on" />
+                    <uc:OcrTextInfo Region="516, 198, 28, 7" Text="GPUs." />
+                    <uc:OcrTextInfo Region="548, 198, 25, 7" Text="GPUs" />
+                    <uc:OcrTextInfo Region="578, 200, 16, 6" Text="can" />
+                    <uc:OcrTextInfo Region="598, 198, 18, 8" Text="also" />
+                    <uc:OcrTextInfo Region="621, 198, 10, 8" Text="be" />
+                    <uc:OcrTextInfo Region="636, 198, 29, 8" Text="added" />
+                    <uc:OcrTextInfo Region="670, 199, 8, 6" Text="to" />
+                    <uc:OcrTextInfo Region="682, 200, 11, 6" Text="an" />
+                    <uc:OcrTextInfo Region="697, 198, 9, 7" Text="A1" />
+                    <uc:OcrTextInfo Region="711, 198, 28, 8" Text="Robot" />
+                    <uc:OcrTextInfo Region="742, 199, 9, 6" Text="to" />
+                    <uc:OcrTextInfo Region="756, 200, 16, 6" Text="run" />
+                    <uc:OcrTextInfo Region="776, 200, 4, 6" Text="a" />
+                    <uc:OcrTextInfo Region="784, 198, 37, 10" Text="training" />
+                    <uc:OcrTextInfo Region="515, 214, 18, 10" Text="job." />
+                    <uc:OcrTextInfo Region="516, 250, 60, 8" Text="Document" />
+                    <uc:OcrTextInfo Region="581, 249, 85, 12" Text="Understanding" />
+                    <uc:OcrTextInfo Region="441, 259, 18, 12" Text="30" />
+                    <uc:OcrTextInfo Region="516, 268, 55, 7" Text="Documents" />
+                    <uc:OcrTextInfo Region="576, 267, 32, 8" Text="limited" />
+                    <uc:OcrTextInfo Region="612, 268, 8, 6" Text="to" />
+                    <uc:OcrTextInfo Region="625, 268, 4, 7" Text="2" />
+                    <uc:OcrTextInfo Region="634, 269, 28, 8" Text="pages" />
+                    <uc:OcrTextInfo Region="666, 267, 17, 8" Text="and" />
+                    <uc:OcrTextInfo Region="688, 268, 24, 7" Text="4MB." />
+                    <uc:OcrTextInfo Region="516, 287, 16, 7" Text="API" />
+                    <uc:OcrTextInfo Region="536, 287, 20, 10" Text="Key:" />
+                    <uc:OcrTextInfo Region="564, 287, 17, 7" Text="Not" />
+                    <uc:OcrTextInfo Region="585, 286, 50, 10" Text="generated" />
+                    <uc:OcrTextInfo Region="639, 288, 17, 9" Text="yet." />
+                    <uc:OcrTextInfo Region="516, 307, 23, 10" Text="Copy" />
+                    <uc:OcrTextInfo Region="543, 307, 16, 7" Text="API" />
+                    <uc:OcrTextInfo Region="563, 306, 15, 10" Text="key" />
+                    <uc:OcrTextInfo Region="592, 307, 44, 7" Text="Generate" />
+                    <uc:OcrTextInfo Region="640, 308, 18, 6" Text="new" />
+                  </scg:List>
+                </uc:CVCache.OcrTexts>
+              </uc:CVCache>
+            </p:CVScope.DesignTimeCache>
+            <p:CVScope.OCREngine>
+              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                <ActivityFunc.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                </ActivityFunc.Argument>
+                <ui:MicrosoftOCR FilterRegion="{x:Null}" Language="{x:Null}" Output="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_1" Image="[Image]" Profile="Screen" />
+              </ActivityFunc>
+            </p:CVScope.OCREngine>
+            <p:CVScope.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ee15748e-6bad-4e90-99f4-35762d5b096c" InformativeScreenshot="3993badf9550df16b825f66faf37dd8b" Selector="&lt;html app='chrome.exe' title='Licenses - UiPath Automation Cloud' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='root' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+              </ui:Target>
+            </p:CVScope.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </p:CVScope>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="384.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="424.666666666667,161.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Reverse a string Sequence" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Name="Count" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="340.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[str]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">Stalin is good boy</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="340.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_7">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[strArray]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[str.Split(convert.ToChar(" "))]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="340.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_8">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[vWord_ctr]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[strArray.Length]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:InterruptibleWhile Condition="[vWord_ctr&gt;0]" DisplayName="While" sap:VirtualizedContainerService.HintSize="340.666666666667,425.333333333333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+              <ui:InterruptibleWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,256" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_9">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[vfinal]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[vfinal+" "+strarray(vWord_ctr-1).tostring]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_10">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[vWord_ctr]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[vWord_ctr-1]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ui:InterruptibleWhile.Body>
+            </ui:InterruptibleWhile>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="340.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[vfinal]" />
+            <Assign sap:VirtualizedContainerService.HintSize="340.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_16">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[str_strArray]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[String.Join(" ,",StrArray)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="340.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[str_strArray]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="340.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[new string (vfinal.ToCharArray.reverse().ToArray).tostring]" />
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="384.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="418,161.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Reverse datatable, List and array Sequence" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd1:DataTable" Name="datatable" />
+              <Variable x:TypeArguments="scg:List(x:String)" Default="[new list (of string)]" Name="str1List" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:BuildDataTable DataTable="[datatable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Column1&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Column2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Column1&gt;sdfs&lt;/Column1&gt;&#xA;    &lt;Column2&gt;1&lt;/Column2&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Column1&gt;d&lt;/Column1&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+            <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_17">
+              <Assign.To>
+                <OutArgument x:TypeArguments="sd1:DataTable">[datatable]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="sd1:DataTable">[datatable.AsEnumerable.Reverse().CopyToDataTable]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:OutputDataTable DataTable="[datatable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[str]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[str]" />
+            <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_18">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[strArray]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[new String(3){}]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_19">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[strArray(0)]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">Stalin</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_21">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[strArray(1)]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">Inbox</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_22">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[strArray(2)]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">Sentmail</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_20">
+              <Assign.To>
+                <OutArgument x:TypeArguments="scg:List(x:String)">[str1List]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="scg:List(x:String)">[strArray.ToList]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="334,137.333333333333" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Reverse">
+              <InvokeMethod.TargetObject>
+                <InArgument x:TypeArguments="scg:List(x:String)">[str1List]</InArgument>
+              </InvokeMethod.TargetObject>
+            </InvokeMethod>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[String.Join(&quot;,&quot;,str1List)]" />
+            <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_24">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[strarray]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[str1List.ToArray]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[String.Join(&quot;,&quot;,strarray)]" />
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="384.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="798,161.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Prime or not Sequence" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="714,62" sap2010:WorkflowViewState.IdRef="Assign_25">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[number]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">4</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="714,62" sap2010:WorkflowViewState.IdRef="Assign_26">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[count]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">0</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="714,62" sap2010:WorkflowViewState.IdRef="Assign_27">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[i]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">1</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:InterruptibleDoWhile Condition="[i&lt;=number]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="714,576" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+              <ui:InterruptibleDoWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,406.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[number mod i =0]" sap:VirtualizedContainerService.HintSize="484,212.666666666667" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Then>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_28">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[count]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[count+1]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </If.Then>
+                  </If>
+                  <Assign sap:VirtualizedContainerService.HintSize="484,62" sap2010:WorkflowViewState.IdRef="Assign_29">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[i]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[i+1]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ui:InterruptibleDoWhile.Body>
+            </ui:InterruptibleDoWhile>
+            <If Condition="[count=2]" sap:VirtualizedContainerService.HintSize="714,214" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;prime&quot;]" />
+              </If.Then>
+              <If.Else>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[&quot;not prime&quot;]" />
+              </If.Else>
+            </If>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="384.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="798,161.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Name="number" />
+              <Variable x:TypeArguments="x:Int32" Name="i" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="714,62" sap2010:WorkflowViewState.IdRef="Assign_30">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[number]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">2</InArgument>
+              </Assign.Value>
+            </Assign>
+            <If Condition="[number mod 2= 0]" sap:VirtualizedContainerService.HintSize="714,214" sap2010:WorkflowViewState.IdRef="If_3">
+              <If.Then>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_11" Text="[&quot;number is even&quot;]" />
+              </If.Then>
+              <If.Else>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_12" Text="[&quot;number is odd&quot;]" />
+              </If.Else>
+            </If>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>

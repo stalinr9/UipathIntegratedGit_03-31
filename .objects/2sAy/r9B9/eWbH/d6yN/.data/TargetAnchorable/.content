@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://acme-test.uipath.com/login" ContentHash="grTexVxU60qprbw4uyHAOA" DesignTimeRectangle="471, 413, 485, 34" ElementType="InputBox" FriendlyName="'INPUT  email'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='email' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' aaname='Email:' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="471, 388, 42, 20" ElementType="Text" FriendlyName="'Email:'" FullSelectorArgument="&lt;webctrl aaname='Email:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Email:' tag='LABEL' type='' check:text='Email:' /&gt;" SearchSteps="FuzzySelector, Image" Text="Email:" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='LABEL' type='' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">4948b5e-9Yk-lOqOE2OVsYg</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">03t0Q-ocKXkqihfk7dA-7-w</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="5366abba9cf803f93158d474d2eedb55.png" xmlns="">0AMoPmxbMJkWV9z66zzv1og</imageRef>
+</TargetAnchorable>

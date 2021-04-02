@@ -1,0 +1,14 @@
+﻿{
+  "Id": "_d8-V1LgA0-thYJdzT-4HQ",
+  "Reference": "IByKh0jIeU-Urc1wWhnBTQ/_d8-V1LgA0-thYJdzT-4HQ",
+  "ParentRef": "IByKh0jIeU-Urc1wWhnBTQ/fpTy9vd6J0K83mlHptentg",
+  "Name": "Type Into 'Username'",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2020-12-01T02:33:57.2792415Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=20.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-12-01T02:33:57.2792415Z"
+}

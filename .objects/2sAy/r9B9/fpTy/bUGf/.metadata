@@ -1,0 +1,14 @@
+﻿{
+  "Id": "bUGfmUkOJku8HDFWg-Fb3w",
+  "Reference": "IByKh0jIeU-Urc1wWhnBTQ/bUGfmUkOJku8HDFWg-Fb3w",
+  "ParentRef": "IByKh0jIeU-Urc1wWhnBTQ/fpTy9vd6J0K83mlHptentg",
+  "Name": "CheckUncheck",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2020-12-01T02:56:07.4417058Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=20.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-12-01T02:56:07.4417058Z"
+}
