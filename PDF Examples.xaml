@@ -1,0 +1,622 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="PDFOutput" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>781.333333333333,800.666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="34">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="27">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart sap:VirtualizedContainerService.HintSize="638,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,74.6666666666667</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.1666666666667 300,110 330,110</av:PointCollection>
+        <x:Double x:Key="Width">604</x:Double>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID0</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">330,75.3333333333333</av:Point>
+          <av:Size x:Key="ShapeSize">200,69.3333333333333</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Read PDF" sap:VirtualizedContainerService.HintSize="533.333333333333,1553.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="readPDFTxt" />
+          <Variable x:TypeArguments="s:String[]" Name="rcBookArray" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign sap:VirtualizedContainerService.HintSize="491.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign.To>
+            <OutArgument x:TypeArguments="s:String[]">[rcBookArray]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("C:\Users\sramadoss8\Downloads\Classes\SamplePDFs","RC*.pdf")]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="491.333333333333,717.333333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[rcBookArray]">
+          <ui:ForEach.Body>
+            <ActivityAction x:TypeArguments="x:String">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="454.666666666667,578.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="chassisNumber" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="[item]" sap:VirtualizedContainerService.HintSize="412.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="ReadPDFText_4" Range="All" Text="[PDFOutput]" />
+                <ui:Matches BuilderPattern="([A-Z][A-Z]\d[A-Z][A-Z][A-Z][A-Z]\d[A-Z]\d\d\d\d\d\d\d\d)+" sap:VirtualizedContainerService.HintSize="412.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="Matches_3" Input="[PDFOutput]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;([A-Z][A-Z]\\d[A-Z][A-Z][A-Z][A-Z]\\d[A-Z]\\d\\d\\d\\d\\d\\d\\d\\d)+&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="([A-Z][A-Z]\d[A-Z][A-Z][A-Z][A-Z]\d[A-Z]\d\d\d\d\d\d\d\d)+" RegexOption="IgnoreCase" Result="[chassisNumber]" />
+                <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="412.666666666667,289.333333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[chassisNumber]">
+                  <ui:ForEach.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,150.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_31" Text="[item]" />
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEach.Body>
+                </ui:ForEach>
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEach.Body>
+        </ui:ForEach>
+        <ui:ReadPDFWithOCR DegreeOfParallelism="1" DisplayName="Read PDF with OCR" FileName="C:\Users\sramadoss8\Downloads\Classes\SamplePDFs\RC Book 1.pdf" sap:VirtualizedContainerService.HintSize="491.333333333333,130.666666666667" sap2010:WorkflowViewState.IdRef="ReadPDFWithOCR_2" ImageDpi="150" Range="All" Text="[readPDFTxt]">
+          <ui:ReadPDFWithOCR.OCREngine>
+            <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+              <ActivityFunc.Argument>
+                <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+              </ActivityFunc.Argument>
+              <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Google OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_2" Image="[Image]" Invert="False" Language="eng" Profile="Legacy" Scale="2">
+                <ui:GoogleOCR.AllowedCharacters>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" Value="" />
+                  </InArgument>
+                </ui:GoogleOCR.AllowedCharacters>
+                <ui:GoogleOCR.DeniedCharacters>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" Value="" />
+                  </InArgument>
+                </ui:GoogleOCR.DeniedCharacters>
+              </ui:GoogleOCR>
+            </ActivityFunc>
+          </ui:ReadPDFWithOCR.OCREngine>
+        </ui:ReadPDFWithOCR>
+        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="491.333333333333,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_30" Text="[readPDFTxt]" />
+        <ui:WriteTextFile DisplayName="Write Text File" FileName="pdfOut.txt" sap:VirtualizedContainerService.HintSize="334,135.333333333333" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[readPDFTxt]" />
+        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[readPDFTxt]" TopMost="True" />
+        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_19" Text="[readPDFTxt]" TopMost="True" />
+      </Sequence>
+    </FlowStep>
+    <FlowStep sap2010:WorkflowViewState.IdRef="FlowStep_16">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">310,303.6</av:Point>
+          <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="810,2888.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_33">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Get text PDF" sap:VirtualizedContainerService.HintSize="768,423.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_34">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="ui:GenericValue" Name="TextUsd" />
+                <Variable x:TypeArguments="x:String" Default="Invoice #38645" Name="FileName" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="C:\Users\sramadoss8\Downloads\Classes\SamplePDFs\Text and Image PDF.pdf" sap:VirtualizedContainerService.HintSize="334,86.6666666666667" sap2010:WorkflowViewState.IdRef="StartProcess_7" />
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'text  $40.00 USD'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_19">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3d1d5a41-d3eb-428c-a74e-c62b00f5bdbe" InformativeScreenshot="3c52fd0c47c15c8fc172662547ce9a69" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='*.pdf - Adobe Acrobat Reader DC' /&gt;&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl name='Sample   Text &amp;amp; Image PDF  ' role='text' /&gt;" WaitForReady="INTERACTIVE">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="ui:GenericValue">[TextUsd]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_29" Text="[TextUsd]" TopMost="True" />
+            </Sequence>
+            <Sequence DisplayName="Anchor Base Find Image" sap:VirtualizedContainerService.HintSize="768,2333.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="ui:GenericValue" Name="TextUsd" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,810" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="ui:GenericValue" Name="TextUsd" />
+                  <Variable x:TypeArguments="ui:GenericValue" Name="Grandtotal" />
+                  <Variable x:TypeArguments="x:String" Name="PdfOutput" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="C:\Users\sramadoss8\Downloads\Classes\RC Book.pdf" sap:VirtualizedContainerService.HintSize="434,86.6666666666667" sap2010:WorkflowViewState.IdRef="StartProcess_5" />
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="434,68" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="d3300737-9028-4e2c-8f70-acd0544b6bea">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ApiKey="yrA9E/jArN7TvZsy3lt1bq8MTJutf7ba9ib9G97LNarn2bKH2MAF3p8P/fwBHsR294ujFZ70nIgojlwGn8H7fg==" DisplayName="CV Screen Scope 'AVL_AVView'" sap:VirtualizedContainerService.HintSize="434,238.666666666667" sap2010:WorkflowViewState.IdRef="CVScope_2" Server="https://cv.uipath.com/" Version="V1">
+                  <p:CVScope.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_27" />
+                    </ActivityAction>
+                  </p:CVScope.Body>
+                  <p:CVScope.DesignTimeCache>
+                    <uc:CVCache InformativeScreenshot="587f8d389b94ee1d54e7569cc760d6f3" LogicalPosition="27, 188" OcrText="" Position="27, 188" ScaleFactor="1.5" ScreenshotGuid="d3d5f25c-c8da-4e7b-8e55-4e7575911be2" ServerVersion="1">
+                      <uc:CVCache.CvUiElements>
+                        <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="128">
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="730, 269, 30, 22" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="198, 264, 34, 30" />
+                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="306, 342, 20, 13" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="951, 284, 44, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="950, 278, 45, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="952, 289, 44, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="950, 273, 46, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="952, 294, 43, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="953, 300, 42, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="949, 268, 46, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="953, 305, 42, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="949, 262, 46, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="952, 225, 43, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="949, 257, 46, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="953, 310, 42, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="954, 204, 41, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="955, 198, 40, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="953, 220, 42, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="953, 214, 42, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="954, 209, 42, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="952, 230, 44, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="954, 193, 41, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="950, 246, 45, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="950, 252, 46, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="950, 241, 45, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="951, 236, 44, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="954, 316, 42, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="954, 188, 41, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="961, 13, 34, 4" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="962, 8, 32, 4" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="954, 182, 42, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="954, 177, 42, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="954, 172, 42, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="958, 33, 38, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="746, 8, 243, 9" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="956, 22, 40, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="958, 27, 38, 7" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="954, 321, 42, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="953, 166, 42, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="955, 150, 40, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="957, 38, 38, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="952, 161, 43, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="957, 44, 38, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="953, 326, 42, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="952, 156, 43, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="812, 10, 180, 10" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="845, 11, 146, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="953, 332, 42, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="956, 49, 39, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="952, 337, 43, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="853, 6, 137, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="946, 16, 48, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="956, 54, 40, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="962, 10, 32, 5" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="616, 511, 365, 42" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="950, 145, 44, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="952, 342, 43, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 391, 19, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 386, 19, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 396, 19, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 60, 19, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 55, 18, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="918, 204, 76, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="954, 60, 41, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="950, 358, 45, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 402, 19, 6" />
+                        </scg:List>
+                      </uc:CVCache.CvUiElements>
+                      <uc:CVCache.OcrTexts>
+                        <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="0" />
+                      </uc:CVCache.OcrTexts>
+                    </uc:CVCache>
+                  </p:CVScope.DesignTimeCache>
+                  <p:CVScope.OCREngine>
+                    <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                      <ActivityFunc.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                      </ActivityFunc.Argument>
+                      <ui:MicrosoftOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_2" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
+                    </ActivityFunc>
+                  </p:CVScope.OCREngine>
+                  <p:CVScope.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eca10180-06d9-49d3-b4d1-734a873d7333" InformativeScreenshot="92e55af10e4dfc0fdcc3bec72a6ea018" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='RC Book.pdf - Adobe Acrobat Reader DC' /&gt;&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </p:CVScope.Target>
+                </p:CVScope>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_25" Text="[&quot;TextUsd :&quot;+TextUsd]" TopMost="True" />
+                <ui:CloseApplication DisplayName="Close Application 'AcroRd32.exe Invoice'" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="CloseApplication_3">
+                  <ui:CloseApplication.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="40988c81-2335-4007-810c-bc4c96210b90" InformativeScreenshot="15d8410290e2bb957727394a6233896c" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='*- Adobe Acrobat Reader DC' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:CloseApplication.Target>
+                </ui:CloseApplication>
+              </Sequence>
+              <Sequence DisplayName="Screen scraping PDF" sap:VirtualizedContainerService.HintSize="726,782" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="ui:GenericValue" Name="GraphicIt" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,178.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="C:\Users\sramadoss8\Downloads\Classes\SamplePDFs\Text and Image PDF.pdf" sap:VirtualizedContainerService.HintSize="334,86.6666666666667" sap2010:WorkflowViewState.IdRef="StartProcess_6" />
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:CommentOut>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="476,243.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'TextandIm Acrobatsd'" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="WindowScope_4" InformativeScreenshot="1eeb2afa8e48f132c575cf1d7b139c31" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='Text and Image PDF.pdf - Adobe Acrobat Reader DC' /&gt;">
+                        <ui:WindowScope.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                            </ActivityAction.Argument>
+                            <ui:GetFullText DisplayName="Get Full Text 'graphic It'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetFullText_2" IgnoreHidden="False">
+                              <ui:GetFullText.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a346340f-92eb-42f1-912e-41d6aa9aa9e3" InformativeScreenshot="1bdfba61d7488cce75f25063df69792a" Selector="&lt;wnd cls='AVL_AVView' idx='3' title='AVScrollView' /&gt;&lt;ctrl idx='1' role='document' /&gt;" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:GetFullText.Target>
+                              <ui:GetFullText.Text>
+                                <OutArgument x:TypeArguments="ui:GenericValue">[GraphicIt]</OutArgument>
+                              </ui:GetFullText.Text>
+                            </ui:GetFullText>
+                          </ActivityAction>
+                        </ui:WindowScope.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:WindowScope>
+                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_26" Text="[GraphicIt]" TopMost="True" />
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:CommentOut>
+                <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'TextandIm Acrobatsd'" sap:VirtualizedContainerService.HintSize="434,406" sap2010:WorkflowViewState.IdRef="WindowScope_5" InformativeScreenshot="b4bd8cf4dd0054d66f74217b7c1b59b5" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='Text and Image PDF.pdf - Adobe Acrobat Reader DC' /&gt;">
+                  <ui:WindowScope.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'document'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetOCRText_3">
+                          <ui:GetOCRText.OCREngine>
+                            <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                              <ActivityFunc.Argument>
+                                <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                              </ActivityFunc.Argument>
+                              <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Google OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_5" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="2">
+                                <ui:GoogleOCR.AllowedCharacters>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <Literal x:TypeArguments="x:String" Value="" />
+                                  </InArgument>
+                                </ui:GoogleOCR.AllowedCharacters>
+                                <ui:GoogleOCR.DeniedCharacters>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <Literal x:TypeArguments="x:String" Value="" />
+                                  </InArgument>
+                                </ui:GoogleOCR.DeniedCharacters>
+                              </ui:GoogleOCR>
+                            </ActivityFunc>
+                          </ui:GetOCRText.OCREngine>
+                          <ui:GetOCRText.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4f8c209f-2584-4e73-ba4c-0df5bf02dfc4" InformativeScreenshot="9a69697f618da7d75fd50a38adc8d4c7" Selector="&lt;wnd cls='AVL_AVView' idx='3' title='AVScrollView' /&gt;&lt;ctrl idx='1' role='document' /&gt;" WaitForReady="INTERACTIVE">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                            </ui:Target>
+                          </ui:GetOCRText.Target>
+                          <ui:GetOCRText.Text>
+                            <OutArgument x:TypeArguments="ui:GenericValue">[GraphicIt]</OutArgument>
+                          </ui:GetOCRText.Text>
+                        </ui:GetOCRText>
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:WindowScope.Body>
+                </ui:WindowScope>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_27" Text="[GraphicIt]" TopMost="True" />
+              </Sequence>
+              <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="C:\Users\sramadoss8\Downloads\Classes\SamplePDFs\Sample Invoice A.pdf" sap:VirtualizedContainerService.HintSize="726,86.6666666666667" sap2010:WorkflowViewState.IdRef="StartProcess_4" />
+              <ui:AnchorBase AnchorPosition="Left" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,198" sap2010:WorkflowViewState.IdRef="AnchorBase_11">
+                <ui:AnchorBase.Action>
+                  <ActivityAction x:TypeArguments="ui:Anchor">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                    </ActivityAction.Argument>
+                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Value" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_16">
+                      <ui:GetValue.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d344c675-f729-4aa5-8555-374cadc9f655" InformativeScreenshot="8ec2b9fcf9cd7b034a9b81fcf5ab9ef3" Selector="&lt;ctrl role='text' /&gt;" WaitForReady="INTERACTIVE">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                        </ui:Target>
+                      </ui:GetValue.Target>
+                      <ui:GetValue.Value>
+                        <OutArgument x:TypeArguments="ui:GenericValue">[TextUsd]</OutArgument>
+                      </ui:GetValue.Value>
+                    </ui:GetValue>
+                  </ActivityAction>
+                </ui:AnchorBase.Action>
+                <ui:AnchorBase.AnchorProvider>
+                  <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Find Image Credit" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitImageAppear_3">
+                    <ui:WaitImageAppear.Image>
+                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.5" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEUAAAATCAYAAADGWsDDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIfSURBVFhH7ZW/a9tAFMf1R3S4UbOnbF5u0tohiwcNWQLZMggMhQ6dBJ5CJ0GXUgrXrVCM1mAQXRoiRKHgGg2lBCGIgxD6E759pzs5dnxKHKi69IYPSPdD797nPZ+dpmlg2cVKMWClGLBSDFgpBqwUA1aKASvFwCNS7pAvLuAzB45DMB/hPENpXPtclhC+CzdMUOmxKgnhyjg7nELk1YO9khplJvAq+rrZv0Mu4DscYVLuzx1AjxQKmszAnRH86BuJIEHxa3o/RpStDeufy76UDiWnT0ZH//6WYaSUSEIOx4uQ1T1zYw7OXJL2GSLwdGUZeLjATZuYC86P1DifISlvtVh6Z2PwMTtMSpnef5+6dbbIcbfVVW5wgbf+SMfXRRxGiqqE4wvkTYVcnOqgMlCupLAziNUtingK1nZQpva4IS4v5aEZvOgKN+087Zt/QsDkWIq6iOmZEnpSyhpZdKylrrESZ2Bsirj4YeiUX4gDKoIs5M9/1SltIltSKPmkalDnc0w509KIjRR1KJUkPYto66CH/ny2i9PNyW9c3e8vM8TiPcKuW+S5loNI6e4UD4FI6U4pkEYnquI7UnQlZRKr7xAndLA+KQN0Cgu+4LrtYtmpS9Upw0mRFMjms82/D/PPcc69B1JIXvpOrzmiO4SqSgl9EG/2pSS//9qdUtPF3wqisRcTH5M2/ggT/6WSdv1xKCn/L1aKASvFgJWyR4M/WPD+xvWfyZIAAAAASUVORK5CYII=" />
+                    </ui:WaitImageAppear.Image>
+                    <ui:WaitImageAppear.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="27a00a5a-6cd2-49a1-b10e-b06218eb84e6" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='Invoice #38645 - Adobe Acrobat Reader DC' /&gt;" WaitForReady="INTERACTIVE">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                      </ui:Target>
+                    </ui:WaitImageAppear.Target>
+                  </ui:WaitImageAppear>
+                </ui:AnchorBase.AnchorProvider>
+              </ui:AnchorBase>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="726,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_14" Text="[TextUsd]" TopMost="True" />
+              <ui:CloseApplication DisplayName="Close Application 'AcroRd32.exe Invoice'" sap:VirtualizedContainerService.HintSize="726,106" sap2010:WorkflowViewState.IdRef="CloseApplication_2">
+                <ui:CloseApplication.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4e6a1f17-4c7e-47d4-a134-bddebe95f162" InformativeScreenshot="15d8410290e2bb957727394a6233896c" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='*- Adobe Acrobat Reader DC' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:CloseApplication.Target>
+              </ui:CloseApplication>
+            </Sequence>
+          </Sequence>
+        </ui:CommentOut.Body>
+      </ui:CommentOut>
+    </FlowStep>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">40,306.04</av:Point>
+          <av:Size x:Key="ShapeSize">200,69.3333333333333</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Regex Sequence" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_23">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="maches" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:ReadPDFWithOCR DegreeOfParallelism="-1" DisplayName="Read PDF With OCR" FileName="C:\Users\sramadoss8\Downloads\Classes\SamplePDFs\RC Book 1.pdf" sap:VirtualizedContainerService.HintSize="412.666666666667,130.666666666667" sap2010:WorkflowViewState.IdRef="ReadPDFWithOCR_3" ImageDpi="150" Range="All" Text="[PDFOutput]">
+          <ui:ReadPDFWithOCR.OCREngine>
+            <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+              <ActivityFunc.Argument>
+                <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+              </ActivityFunc.Argument>
+              <ui:MicrosoftOCR FilterRegion="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Microsoft OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_3" Image="[Image]" />
+            </ActivityFunc>
+          </ui:ReadPDFWithOCR.OCREngine>
+        </ui:ReadPDFWithOCR>
+        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="412.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_28" Text="[PDFOutput]" />
+        <ui:Matches BuilderPattern="([A-Z][A-Z]\d[A-Z][A-Z][A-Z][A-Z]\d[A-Z]\d\d\d\d\d\d\d\d)+" sap:VirtualizedContainerService.HintSize="412.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[PDFOutput]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;([A-Z][A-Z]\\d[A-Z][A-Z][A-Z][A-Z]\\d[A-Z]\\d\\d\\d\\d\\d\\d\\d\\d)+&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="([A-Z][A-Z]\d[A-Z][A-Z][A-Z][A-Z]\d[A-Z]\d\d\d\d\d\d\d\d)+" RegexOption="IgnoreCase" Result="[maches]" />
+        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="412.666666666667,289.333333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[maches]">
+          <ui:ForEach.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,150.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_23" Text="[item]" />
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEach.Body>
+        </ui:ForEach>
+        <ui:Matches BuilderPattern="([A-Z][A-Z]\d[A-Z][A-Z][A-Z][A-Z]\d[A-Z]\d\d\d\d\d\d\d\d)+" sap:VirtualizedContainerService.HintSize="412.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="Matches_2" Input="[PDFOutput]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;([A-Z][A-Z]\\d[A-Z][A-Z][A-Z][A-Z]\\d[A-Z]\\d\\d\\d\\d\\d\\d\\d\\d)+&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="([A-Z][A-Z]\d\d[A-Z][A-Z]\d\d\d)+" RegexOption="IgnoreCase" Result="[maches]" />
+        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="412.666666666667,289.333333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[maches]">
+          <ui:ForEach.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,150.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_24" Text="[item]" />
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEach.Body>
+        </ui:ForEach>
+      </Sequence>
+    </FlowStep>
+  </Flowchart>
+</Activity>

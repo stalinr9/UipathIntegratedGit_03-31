@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="oIUKTNJ4cEaCVBlK26xcYA" DesignTimeRectangle="166, 200, 180, 34" ElementType="InputBoxPassword" FriendlyName="'editable text  pass'" FullSelectorArgument="&lt;ctrl automationid='pass' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='pass' role='editable text' /&gt;" ScopeSelectorArgument="&lt;wnd app='uidemo.exe' cls='HwndWrapper*' title='UiDemo' /&gt;" SearchSteps="FuzzySelector" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="35, 195, 89, 39" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;ctrl name='Password' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Password' role='text' automationid='' check:text='Password' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Password" TextMethod="AttributeText" TextSelector="&lt;ctrl role='text' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">1cy68uRCWckyq0cZybfdy4g</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0SJgY_i-u5kuz6vKmv-xMZQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="3eeed617c3d750cdf7fc6513172dc9b9.png" xmlns="">0AtmXmrHBHUqxwSplBy2vSg</imageRef>
+</TargetAnchorable>

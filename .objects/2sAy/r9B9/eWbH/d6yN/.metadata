@@ -1,0 +1,13 @@
+﻿{
+  "Id": "d6yNTUSje0OI_Vt-_eQH1Q",
+  "Reference": "IByKh0jIeU-Urc1wWhnBTQ/d6yNTUSje0OI_Vt-_eQH1Q",
+  "ParentRef": "IByKh0jIeU-Urc1wWhnBTQ/eWbHEPQv60OhS1XsvqR08g",
+  "Name": "Email ID Filed",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2020-11-30T05:44:19.5907801Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-11-30T05:44:19.5907801Z"
+}

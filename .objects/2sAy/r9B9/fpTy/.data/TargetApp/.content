@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp ContentHash="tOip9sazpEmBaL36WhNvew" FilePath="C:\Users\sramadoss8\Downloads\Classes\Assignments\Selectors\Fine-tuning Selectors with Variables\uidemo.exe" Selector="&lt;wnd app='uidemo.exe' cls='HwndWrapper*' title='UIDemo'/&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0Vn2bG-8Qrk2HkIvKL0I5fQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="9a1f7752a5dc4875cf679b3944e9595b.png" xmlns="">01RIunXk0oEKR8DT9xRbpwg</imageRef>
+</TargetApp>

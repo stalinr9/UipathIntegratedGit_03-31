@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="PkSO-E0dnEqlsNkSSIP2sQ" DesignTimeRectangle="179, 290, 50, 23" ElementType="Text" FriendlyName="'Log In'" FullSelectorArgument="&lt;ctrl name='Log In' role='push button' /&gt;&lt;ctrl name='Log In' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Log In' role='push button' /&gt;&lt;ctrl name='Log In' role='text' automationid='' check:text='Log In' /&gt;" ScopeSelectorArgument="&lt;wnd app='uidemo.exe' cls='HwndWrapper*' title='UiDemo' /&gt;" SearchSteps="FuzzySelector" Text="Log In" TextMethod="AttributeText" TextSelector="&lt;ctrl role='text' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="148, 287, 112, 29" ElementType="Button" FriendlyName="'Log In'" FullSelectorArgument="&lt;ctrl name='Log In' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Log In' role='push button' automationid='' check:text='Log In' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Log In" TextMethod="AttributeText" TextSelector="&lt;ctrl role='push button' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">1RtzKOxmRfUiNB4hGd1lObg</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0-QX5KHYs6k2bjCtdchLQKQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="881835a4580a8ea56ccbd148f1f9275c.png" xmlns="">0PwnCJZ8z_ki4wPZh9GQSnA</imageRef>
+</TargetAnchorable>
